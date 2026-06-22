@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<style>
+
+body{
+  font-family:Arial,sans-serif;
+  background:white;
+  padding:24px;
+}
+
+h2{
+  text-align:center;
+  color:#1a1a2e;
+  margin-bottom:20px;
+  font-size:17px;
+}
+
+/* Allows horizontal scrolling instead of squashing columns */
+.table-wrapper{
+  overflow-x:auto;
+  width:100%;
+}
+
+.gantt{
+  border-collapse:collapse;
+  table-layout:fixed;
+  min-width:1350px;
+}
+
+/* Header */
+.gantt th{
+  background:#1a1a2e;
+  color:white;
+  padding:7px 3px;
+  font-size:9.5px;
+  text-align:center;
+  border:1px solid #555;
+  line-height:1.4;
+}
+
+/* All cells */
+.gantt td{
+  border:1px solid #ddd;
+  padding:5px;
+  font-size:10.5px;
+}
+
+/* FIRST COLUMN FIX */
+.gantt th:first-child,
+.gantt td.label{
+
+  width:320px;
+  min-width:320px;
+  max-width:320px;
+
+  background:#f0f0f0;
+  color:#1a1a2e;
+
+  font-weight:bold;
+
+  text-align:left;
+
+  white-space:normal;
+
+  overflow-wrap:anywhere;
+
+  line-height:1.35;
+
+  vertical-align:middle;
+}
+
+/* Week columns */
+.gantt th:not(:first-child),
+.gantt td:not(.label){
+
+  width:70px;
+  min-width:70px;
+
+  text-align:center;
+}
+
+.bar{
+  border-radius:3px;
+  height:18px;
+}
+
+.c1{background:#4472C4;}
+.c2{background:#ED7D31;}
+.c3{background:#70AD47;}
+.c4{background:#7030A0;}
+.cb{background:#A9A9A9;}
+
+.bg1{background:#dce6f1;}
+.bg2{background:#fce4d6;}
+.bg3{background:#e2efda;}
+.bg4{background:#ead1f7;}
+.bgb{background:#e8e8e8;}
+
+.legend{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-top:18px;
+  justify-content:center;
+}
+
+.legend-item{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:10px;
+}
+
+.lc{
+  width:18px;
+  height:12px;
+  border-radius:2px;
+}
+
+th.cur{
+  background:#2e5ba8 !important;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>ATP Tennis Match Prediction – Project Gantt Chart</h2>
+
+<div class="table-wrapper">
+
+<table class="gantt">
+
+<thead>
+
+<tr>
+
+<th class="cur">Phase / Task</th>
+
+<th>W1<br>8–14 Jun</th>
+
+<th>W2<br>15–21 Jun</th>
+
+<th>W3<br>22–28 Jun</th>
+
+<th>W4<br>29 Jun–<br>5 Jul</th>
+
+<th>W5<br>6–12 Jul</th>
+
+<th>W6<br>13–19 Jul</th>
+
+<th>W7<br>20–26 Jul</th>
+
+<th>W8<br>27 Jul–<br>2 Aug</th>
+
+<th>W9<br>3–9 Aug</th>
+
+<th>W10<br>10–16 Aug</th>
+
+<th>W11<br>17–23 Aug</th>
+
+<th>W12<br>24–30 Aug</th>
+
+<th>W13<br>31 Aug–<br>7 Sep</th>
+
+<th>Buffer<br>8–11 Sep</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td class="label">W1: Project Initiation and Scope Definition</td>
+<td class="bg1"><div class="bar c1"></div></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="label">W2: Literature Review</td>
+<td></td>
+<td class="bg1"><div class="bar c1"></div></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="label">W3: Data Collection and Initial Exploration</td>
+<td></td><td></td>
+<td class="bg2"><div class="bar c2"></div></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="label">W4: Data Cleaning and Preprocessing</td>
+<td></td><td></td><td></td>
+<td class="bg2"><div class="bar c2"></div></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="label">W5: Feature Engineering</td>
+<td></td><td></td><td></td><td></td>
+<td class="bg2"><div class="bar c2"></div></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="label">W6: Traditional Sports Rating Models</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td class="bg3"><div class="bar c3"></div></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="label">W7: Machine Learning Model Development</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="bg3"><div class="bar c3"></div></td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="label">W8: Model Optimisation and Evaluation</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="bg3"><div class="bar c3"></div></td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="label">W9: Explainability Analysis</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="bg3"><div class="bar c3"></div></td>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="label">W10: Dissertation Writing (Part 1)</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="bg4"><div class="bar c4"></div></td>
+<td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="label">W11: Dissertation Writing (Part 2) and Score Prediction Exploration</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="bg4"><div class="bar c4"></div></td>
+<td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td class="label">W12: Tournament Simulation and Dissertation Refinement</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="bg4"><div class="bar c4"></div></td>
+<td></td><td></td>
+</tr>
+
+<tr>
+<td class="label">W13: Final Review and Presentation Preparation</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="bg4"><div class="bar c4"></div></td>
+<td></td>
+</tr>
+
+<tr>
+<td class="label">Buffer Period</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="bgb"><div class="bar cb"></div></td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="legend">
+
+<div class="legend-item">
+<div class="lc" style="background:#4472C4"></div>
+Foundation (W1–W2)
+</div>
+
+<div class="legend-item">
+<div class="lc" style="background:#ED7D31"></div>
+Data and Features (W3–W5)
+</div>
+
+<div class="legend-item">
+<div class="lc" style="background:#70AD47"></div>
+Modelling and Evaluation (W6–W9)
+</div>
+
+<div class="legend-item">
+<div class="lc" style="background:#7030A0"></div>
+Writing and Finalisation (W10–W13)
+</div>
+
+<div class="legend-item">
+<div class="lc" style="background:#A9A9A9"></div>
+Buffer Period
+</div>
+
+</div>
+
+</body>
+
+</html>
